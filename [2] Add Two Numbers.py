@@ -26,3 +26,28 @@ CONSTRAINTS
 #         self.val = val
 #         self.next = next
 
+def addTwoNumbers(l1, l2):
+    total = ListNode()
+    cur_total = total
+    carry = 0
+    cur_sum = carry
+
+    while (l1 != None or l2 != None):
+        if (l1 != None):
+            cur_sum += l1.val
+            l1 = l1.next
+        if (l2 != None):
+            cur_sum += l2.val
+            l2 = l2.next
+
+        cur_digit = cur_sum % 10
+        cur_total.next = ListNode(val=cur_digit)
+        cur_total = cur_total.next
+
+        carry = cur_sum // 10
+        cur_sum = carry
+
+    if (cur_sum) > 0:
+        cur_total.next = ListNode(val=carry)
+
+    return total.next

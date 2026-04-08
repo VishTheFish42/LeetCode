@@ -47,7 +47,7 @@ def addTwoNumbers(l1, l2):
         carry = cur_sum // 10
         cur_sum = carry
 
-    if (cur_sum) > 0:
+    if (cur_sum > 0):
         cur_total.next = ListNode(val=carry)
 
     return total.next

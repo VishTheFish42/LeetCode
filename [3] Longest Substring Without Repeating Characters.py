@@ -2,11 +2,14 @@
 PROBLEM 3
 Longest Substring Without Repeating Characters
 
+
 FOCUS
 Hash Table, String, Sliding Window
 
+
 DESCRIPTION
 Given a string "s", find the length of the longest substring without duplicate characters.
+
 
 CONSTRAINTS
 [1] 0 <= s.length <= 5 * 10^4

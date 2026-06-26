@@ -1,5 +1,5 @@
 '''
-PROBLEM 1
+PROBLEM 1 (EASY)
 Two Sum
 
 FOCUS

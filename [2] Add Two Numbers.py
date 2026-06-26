@@ -1,18 +1,13 @@
 '''
-PROBLEM 2
+PROBLEM 2 (MEDIUM)
 Add Two Numbers
-
 
 FOCUS
 Linked List, Math, Recursion
 
-
 DESCRIPTION
-You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each 
-of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
-
+You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
 You may assume the two numbers do not contain any leading zero, except the number 0 itself.
-
 
 CONSTRAINTS
 [1] The number of nodes in each linked list is in the range [1, 100].
@@ -26,6 +21,7 @@ CONSTRAINTS
 #         self.val = val
 #         self.next = next
 
+# SOLUTION
 def addTwoNumbers(l1, l2):
     total = ListNode()
     cur_total = total
@@ -51,3 +47,10 @@ def addTwoNumbers(l1, l2):
         cur_total.next = ListNode(val=carry)
 
     return total.next
+
+'''
+ANALYSIS
+Let n be the length of l1 and m be the length of l2.
+Time Complexity: O(max(n, m))
+Space Complexity: O(max(n, m))
+'''

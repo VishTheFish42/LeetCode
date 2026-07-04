@@ -30,10 +30,18 @@ def twoSum(nums, target):
         nums_hash[num] = index
 
 '''
-FOLLOW-UP
-Can you come up with an algorithm that is less than O(n^2) time complexity?
+EXPLANATION
+[1] We first create a hash table of each number mapped to its index.
+[2] We iterate across each of these mappings and calculate the other number needed to create a sum. 
+    If that number is in the hash table, we can return the current index being iterated on along with the mapping.
+[3] Otherwise, we add the new number mapped to its index.
 
 ANALYSIS
 Time Complexity: O(n)
 Space Complexity: O(n)
+'''
+
+'''
+FOLLOW-UP
+Can you come up with an algorithm that is less than O(n^2) time complexity?
 '''

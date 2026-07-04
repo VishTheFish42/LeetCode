@@ -49,6 +49,15 @@ def addTwoNumbers(l1, l2):
     return total.next
 
 '''
+EXPLANATION
+[1] Initialize total as a new ListNode as well as cur_total and cur_sum.
+[2] We iterate through this process while either l1 or l2 is None. If either one is None on the current iteration, 
+    we add val of that appropriate list to cur_sum and move to the next node in that list.
+[3] We set cur_digit to the sum % 10. After initializing the next node of cur_total to a ListNode with val as cur_digit, we set cur_total to this next node.
+[4] We set carry to cur_sum // 10 and cur_sum to carry.
+[5] Once we exit the while loop, if cur_sum is greater than 0, then we set the next node of cur_total to a new ListNode with val as carry.
+[6] Finally, we return the next node of total.
+
 ANALYSIS
 Let n be the length of l1 and m be the length of l2.
 Time Complexity: O(max(n, m))

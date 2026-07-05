@@ -29,17 +29,13 @@ def longestPalindrome(self, s):
       
        return s[(left + 1):right]
 
-
    longest = ''
-
 
    for i in range(len(s)):
        odd_palindrome = determine_palindrome(i, i)
        even_palindrome = determine_palindrome(i, i + 1)
 
-
        longest = max(longest, odd_palindrome, even_palindrome, key=len)
-
 
    return longest
 

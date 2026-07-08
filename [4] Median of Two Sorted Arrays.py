@@ -59,19 +59,8 @@ def findMedianSortedArrays(nums1, nums2):
         return (max(max_left1, max_left2) + min(min_right1, min_right2)) / 2.0
 
 '''
-EXPLANATION
-[1] First, we ensure that the shorter array is stored in nums1. 
-[2] We have two pointers left and right to traverse nums1. We also have partitions i and j to split nums1 and nums2, respectively. 
-    The elements at indices i and j are included in the right side of each array.
-[3] We set the maximum of the left and the minimum of the right of each array to respective variables. We know we have the correct partition, 
-    when the minimum of the right of one array is greater than the maximum of the left of the other array in both ways.
-[4] Until this is reached, we move right to i - 1 if the maximum of the left of nums1 is greater than minimum of the right of nums1, 
-    and we move left to i + 1 if the opposite condition is true.
-[5] We then recalculate i and j and the maximum of right and minimum of left for each array.
-[6] Outside of the loop, if there are an odd number of elements total, the median is simply the higher of the maximums of left. 
-    Otherwise, it is the sum of the higher of the maximums of left and the lower of the minimums of right, all divided by 2.
-
 ANALYSIS
 Time Complexity: O(log(min(m, n)))
 Space Complexity: O(1)
+where m is the length of nums1 and n is the length of nums2
 '''

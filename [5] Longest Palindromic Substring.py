@@ -40,16 +40,8 @@ def longestPalindrome(self, s):
    return longest
 
 '''
-EXPLANATION
-[1] We can simply return the string if it has one character or less.
-[2] We define a function determine_palindrome() that starts from indices left and right and extends out to obtain the longest possible palindrome. 
-    The indices left and right are the same for an odd number of characters and one apart for an even number of characters.
-[3] We iterate across each character in the string. We initialize longest to a blank string.
-[4] We calculate the longest odd-length palindrome (centered at the current character) and the longest even-length palindrome (centered at the current character and the next). 
-    We set longest to be the max length string out of the current value of longest and the discovered odd and even palindrome.
-[5] Once the loop ends, we return longest.
-
 ANALYSIS
 Time Complexity: O(n^2)
 Space Complexity: O(n)
+where n is the length of s
 '''
